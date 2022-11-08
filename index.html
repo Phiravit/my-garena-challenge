@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin >
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  </head>
+<style>
+  .col-12-3{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    
+  
+  }
+  .col-12-2-10{
+    display: grid;
+    grid-template-columns: 4fr 8fr ;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    
+  
+  }
+  .col-row{
+    display: inline-grid;
+    
+  }
+  .background-gif{
+    width: 100%;
+    height: 60vh;
+    position: relative;
+   background-image: url(https://i.pinimg.com/originals/94/24/c4/9424c4c89a3a37536d05df7cf7d48e25.gif);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   margin: auto;
+  
+  }
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .center{
+    text-align: center;
+  }
+  .overlay{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(10, 10, 10,0.35);
+  }
+  body{
+    background-color: #1F0B54;
+    font-family: 'Silkscreen', cursive;
+  }
+  .dark{
+    color: black;
+  }
+  .my-nav{
+    background-color: #263238;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .container-full{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #263238;
+  }
+  .ml-auto{
+    margin-left: auto;
+  }
+  .nav-inline{
+    display: inline;
+    
+  }
+  .link{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    font-size: 20px;
+  }
+  .container{
+    width: 80%;
+    margin: auto;
+   
+  }
+  
+  .width50{
+    width: 400px;
+    height: 350px;
+    margin: auto;
+  }
+  .box{
+    width: 350px;
+    height: 350px;
+    margin: auto;
+  }
+  .game{
+    margin-top: 50px;
+  }
+  .white{
+    color: white;
+  }
+  .display-5{
+    font-size: 50px;
+  }
+  .mb-5{
+    margin-bottom: 50px;
+  }
+  .mb-3{
+    margin-bottom: 30px;
+  }
+  .profile-img{
+    border-radius: 50%;
+  }
+  .display-3{
+    font-size: 30px;
+  }
+  .p-5{
+    padding: 50px;
+    padding-top: 5px;
+  }
+  .hovercard:hover{
+   transform: scale(1.1);
+  }
+  .hovercard{
+    transition: 0.7s;
+  }
+  .mb-1{
+    margin-bottom: 15px;
+  }
+  .display-7{
+    font-size: 70px;
+  }
+  .display-4{
+      font-size: 40px;
+  }
+  .data{
+    background-color: #263238;
+  }
+  .background-gif-1{
+    width: 100%;
+    height: 60vh;
+    position: relative;
+   background-image: url(https://i.pinimg.com/originals/94/24/c4/9424c4c89a3a37536d05df7cf7d48e25.gif);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   margin: auto;
+  }
+  .container-lg{
+    width: 90%;
+    margin: auto;
+   
+  }
+ .col-12-6{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+
+ }
+ .display-2{
+  font-size: 20px;
+ }
+ .card{
+  position: relative;
+  width: 500px;
+  height: 350px;
+  background-color: #202020;
+ }
+ .card-img{
+  width: 175px;
+  height: 175px;
+ }
+ .p-2{
+  padding: 20px;
+  
+ }
+ .p-1{
+  padding: 15px;
+  padding-left: 0px;
+ }
+ .text-box{
+  margin-top:50% ;
+ }
+.p-4{
+  padding: 35px;
+  padding-top: 5px;
+}
+.col-12-4{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+.inputcard{
+  position: relative;
+  width: 600px;
+  height: 370px;
+  border-style:solid ;
+
+  margin: auto;
+  margin-top: 50px;
+ }
+ .col-12-6-other{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  margin: auto;
+  
+ }
+ .real-width{
+  position: relative;
+ }
+ .max-width{
+  position: absolute;
+  max-width: 100%;
+ }
+ .br{
+  word-wrap: break-word;
+ }
+ .blur-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0,0,0,0.8);
+ }.article-input{
+  width: 250px;
+  height: 200px;
+ }
+ .text-area{
+  width: 550px;
+  height: 150px;
+  margin-top:20px ;
+  margin-left: 15px;
+  
+ }
+ .mt-1{
+  margin-top: 10px;
+ }
+ .btn{
+  width: 75px;
+  height: 30px;
+  background-color: #53df5a;
+  border-radius: 10px;
+  font-family: 'Silkscreen', cursive;
+  font-size: 20px;
+ }
+ .ml-1{
+   margin-left: 15px;
+ }
+ .ml-btn{
+  margin-left: 80%;
+  margin-top: 10px;
+ }
+ input , textarea{
+  font-family: 'Athiti', sans-serif;
+  font-size: 20px;
+ }
+ .Montserrat{
+  font-family: 'Montserrat', sans-serif;
+ }
+</style>
+<body>
+    <body>
+      <section>
+        <nav class="container-full ">
+         <ul class="ml-auto">
+          <li class="nav-inline"><a href="index.html" class="link">Home</a></li>
+          <li class="nav-inline"><a href="fetch.html" class="link">Game list</a></li>
+          <li class="nav-inline"><a href="game.html" class="link">Review</a></li>
+          <li class="nav-inline"><a href="community.html" class="link">Community</a></li>
+         </ul>
+        </nav>
+       </section>
+      
+        <section class="intro">
+        <div class="background-gif">
+          <div class="overlay">
+            <h3 class="center display-7 white">Video Game Reviews</h3>
+          </div>
+        </div>
+      </section>
+      <section class="profile">
+        <div class="container-lg">
+          <div class="col-12-2-10">
+            <div class="col-row white ">
+             <h3 class="center display-5 mb-3">Avatar</h3>
+             <img src="https://i.pinimg.com/originals/bf/9f/df/bf9fdf06f347c4222a6c04f914f4bcbf.gif"class="box profile-img mb-1">
+             <h3 class="display-4 ">Details</h3>
+             <div class="p-5 display-2">
+              <h3>Name : Tenmo Player</h3>
+              <h3>Age : 31</h3>
+              <h3>Favorite Game : Overwatch2 Lol</h3>
+              <h3>Favorite Game Community : Lol</h3>
+              <h3>Favorite Character : Teemo</h3>
+              <h3>Quote : I need healing</h3>
+             </div>
+            </div>
+            <div class="col-row white">
+             <h3 class="display-5">Your Last review</h3>
+             <div class="col-12-6">
+              <div class="col-row white">
+                <div class="card col-12-2-10 ">
+                  <div class=" white p-2">
+                  <img src="https://i.pinimg.com/originals/bf/9f/df/bf9fdf06f347c4222a6c04f914f4bcbf.gif"class="card-img">
+                  <h3 class="center">member01</h3>
+                  </div>
+                  <div class="white p-1">
+                  <h3>Name : Tenmo Player</h3>
+                 <h3>Category : Game</h3>
+                 <h3>Game : Lol</h3>
+                 <h3>Article : <br>Master yi too op where nerf?</h3>
+                </div>
+                </div>
+              </div>
+              <div class="col-row white">
+                <div class="card col-12-2-10 ">
+                  <div class=" white p-2">
+                  <img src="https://i.pinimg.com/originals/bf/9f/df/bf9fdf06f347c4222a6c04f914f4bcbf.gif"class="card-img">
+                  <h3 class="center">member01</h3>
+                  </div>
+                  <div class="white p-1">
+                  <h3>Name : Tenmo Player</h3>
+                 <h3>Category : Game</h3>
+                 <h3>Game : Bed War</h3>
+                 <h3>Article : <br>So fun but need something more.</h3>
+                </div>
+             </div>
+             </div>
+            </div>
+        </div>
+      </div>
+    </section>
+      
+    <section class="game mb-5">
+        <div class="container">
+          <h1 class="white center display-5 mb-5">Category</h1>
+          <div class="col-12-3">
+            <div class="col-row white">
+              <a href="fetch.html" class="link">
+               <h3 class="center mb-1 display-4">Game List</h3>
+               <div class="hovercard center">
+              <img src="https://art.pixilart.com/b308fe2fc5a3397.gif"class="width50">
+              </div>
+            </a>
+            </div>
+            <div class="col-row white">
+              <a href="game.html" class="link">
+                <h3 class="center mb-1 display-4">Game Reviews</h3>
+              <div class="hovercard center">
+             <img src="https://i.pinimg.com/originals/c2/b7/2c/c2b72cfbbbc93891c51b5c615c10b356.gif"class="width50">
+             </div>
+            </a>
+           </div>
+            <div class="col-row white">
+              <a href="community.html" class="link">
+                <h3 class="center mb-1 display-4">Community</h3>
+              <div class="hovercard center">
+              <img src="https://art.pixilart.com/b308fe2fc5a3397.gif"class="width50">
+              </div>
+              </a>
+           </div>
+          </div>
+        </div>
+        </section>          
+      </body>
+</body>
+</html>

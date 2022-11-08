@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="custom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin >
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <script src="CreateBoxes.js"></script>
+    <section>
+        <nav class="container-full ">
+         <ul class="ml-auto">
+          <li class="nav-inline"><a href="index.html" class="link">Home</a></li>
+          <li class="nav-inline"><a href="fetch.html" class="link">Game list</a></li>
+          <li class="nav-inline"><a href="game.html" class="link">Review</a></li>
+          <li class="nav-inline"><a href="community.html" class="link">Community</a></li>
+         </ul>
+        </nav>
+       </section>
+
+    <section class="intro">
+        <div class="background-gif">
+          <div class="overlay">
+            <h3 class="center display-7 white">Game Zone</h3>
+            <h3 class="center display-7 white">My Game List</h3>
+          </div>
+        </div>
+      </section>
+    <div>
+        <div class="container-lg mt-1">
+            <h3 class="display-5 white">My Game List</h3>
+        <div id="list" class="col-12-4">
+        </div>
+    </div>
+</div>
+</body>
+
+<style>
+    html {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .banner {
+        color: red;
+        background-color: #3499ff;
+        text-align: center;
+    }
+
+    #title {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #description {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .card{
+        width: 400px;
+        height: 500px;
+        background-color: #202020;
+        text-align: center;
+        padding: 10px;
+        margin: auto;
+        color: white;
+        display: inline-block;
+        vertical-align: middle;
+        transition: 0.7s;
+        
+    }
+
+    .card img {
+        width: 250px;
+    }
+
+    .card .detail {
+        height: 150px;
+        overflow-y: scroll;
+        scrollbar-width:10px ;
+        scrollbar-color: red green;
+        
+        
+    }
+
+    .body {
+        background-color: #1F0B54;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    .card:hover {
+        background-color: #714cd8;
+    }
+
+    #my-game {
+        width: 100px;
+        height: 60px;
+        background-color: orange;
+    }
+
+  
+</style>
+<script>
+    //   CreateBoxes.js   //
+    fetch("https://gamertocoder.garena.co.th/api/minigames")
+        .then((response) => {
+            if (response.status !== 200) {
+                return response.status;
+            }
+            return response.json();
+        })
+        .then((data) => {
+            if (typeof data == "number") {
+                alert(data);
+            } else {
+                for (let i = 0; i < data.length; i++) {
+                    const currentData = data[i];
+                    const newListItem = document.createElement("div");
+                    newListItem.classList.add("card");
+                    const genre_array = currentData.genre;
+                    let genre_string = genre_array[0];
+                    if (genre_array.length > 1) {
+                        for (let j = 1; j < genre_array.length; j++) {
+                            genre_string = genre_string + ", " + genre_array[j];
+                        }
+                    }
+                    const html =
+                        
+                        '<div class="name" onclick="changeName(' + currentData.name + ')"> ชื่อ : ' + currentData.name + '</div>'
+                        + '<img src="' + currentData.icon + '"/>'
+                        + '<div>ประเภท : ' + genre_string + '</div>'
+                        + '<div class="detail">' + currentData.description + '</div>'
+                    html.trim();
+                    newListItem.innerHTML = html;
+                    document.getElementById("list").appendChild(newListItem);
+                }
+            }
+        });
+
+</script>
+
+</html>
